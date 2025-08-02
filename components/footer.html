@@ -1,0 +1,44 @@
+<footer id="footer">
+  <div class="container">
+    <div class="first-section">
+      <img src="imgs/logo-text-cropped.png" alt="logo-of-stargate" width="150px">
+      <h4>STARGATE LINKS</h4>
+      <p>EXTRA BUILDING,OPP.JAN OUSHADHI,<br>NEAR TB JUNCTION, ANGAMALY</p>
+    </div>
+    <div class="second-section">
+      <h4>Quick Links</h4>
+      <a href="stargate-academy.html"><i class="fa-solid fa-link"></i> Stargate Academy</a>
+      <a href="stargate-academy.html"><i class="fa-solid fa-link"></i> Stargate Career Solutions</a>
+      <a href="stargate-skylinks.html"><i class="fa-solid fa-link"></i> Stargate Skylinks</a>
+    </div>
+    <div class="third-section">
+      <h4>Contact</h4>
+      <p>+91 9846244844</p>
+      <p>stargatelinks@gmail.com</p>
+      <h4>Follow Us</h4>
+      <a href="https://instagram.com/stargate_links"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtu.be/Na5Kbv1L-A0"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100091966272358"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap + JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Google Apps Script form submission
+  document.getElementById("submit-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    fetch("https://script.google.com/macros/s/AKfycbwUnlabL4HHd-riayZWxNG3whl0tsSsflBfXOqq87RbcnRHJOk9gYGNE3dEhgNgK2kh6Q/exec", {
+      method: "POST",
+      body: new FormData(this)
+    })
+    .then(response => {
+      alert("Form submitted successfully");
+      window.location.reload();
+    })
+    .catch(error => {
+      alert("Something went wrong!");
+    });
+  });
+</script>

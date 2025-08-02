@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    /* font-family: 'Muli', sans-serif;
+    Arial, Helvetica, sans-serif */
+    background-color: #EDF1FA;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.c-container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+#main-hr{
+    margin: 70px 0px 0px 0px;
+}
+#about-section h2::before,#service-section h2::before,#contact-section h2::before,
+.testimonials-section-header::before{
+    content: "";
+    border: 10px solid #545454;
+    margin-right: 20px;
+}
+
+/* nav bar */
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+    position: fixed;
+    z-index: 1;
+}
+#logo{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 2rem;
+}
+#logo img{
+    width: 140px;
+    height: 100px;
+}
+#nav-links{
+    float: right;
+}
+#nav-links ul li{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+#nav-links ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 87px;
+    cursor: pointer;
+}
+.dropdown-size{
+    font-size: 1.3rem;
+    margin-left: .5rem;
+}
+.dropdown button{
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 87px;
+}
+#nav-links ul li a:hover,.dropdown button:hover{
+    color: #0066CC;
+}
+.dropdown{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+.dropdown-options{
+    position: absolute;
+    overflow: auto;
+    background: #ECF1F9;
+    width: 20rem;
+    border-radius: 3px;
+    display: none;
+    transition: all .5s;
+}
+.first-option,.second-option{
+    padding: .8rem;
+}
+.dropdown-options a{
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.dropdown-options a:hover{
+    color: #ED1B24;
+    transition: .5s;
+}
+.dropdown-options hr{
+    border: none;
+    height: 1px;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+}
+.dropdown:hover .dropdown-options{
+    display: block;
+    transition: all .5s;
+}
+#menu-btn{
+    font-size: 32px;
+    color: #000;
+    float: right;
+    line-height: 82px;
+    margin: 0 25px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/* showcase section */
+
+.showcase-container{
+    width: 100%;
+    height: 43rem;
+    position: relative;
+    background: url("../imgs/showcase-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 100px #000;
+    padding-top: 87px;
+}
+.showcase-container h1{
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 6rem;
+}
+.showcase-container h1::before{
+    content: "";
+    border: 10px solid #ffffff;
+    margin-right: 20px;
+}
+.service-box-section{
+    width: 100%;
+    height: 23rem;
+    background: url("../imgs/service-box-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.service-box-section .card{
+    display: inline-block;
+    translate: 0px -191px;
+    margin: 0 5rem;
+    transition: .5s;
+    width: 18rem;
+}
+.service-box-section .card:hover{
+    translate: 0px -195px;
+    transition: .5s;
+}
+/* about section */
+#about-section h2,.testimonials-section-header,#contact-section h2{
+    text-align: center;
+    color: #545454;
+    margin: 30px 0px 50px 0px;
+    font-weight: 0;
+}
+#about-section span{
+    margin-left: 10px;
+    color: #33C2EE;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.about-section-inner-container{
+    width: 100%;
+    height: 25rem;
+    margin: 5rem auto;
+    overflow: hidden;
+    /* background: #01A4E3; */
+    background-color: #EDF1FA;
+    color:#000;
+}
+.about-section-img{
+    width: 50%;
+    display: inline-block;
+}
+.about-section-img img{
+    width: 100%;
+    height: 100%;
+}
+.about-content{
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 1.5rem;
+}
+.about-content p{
+    line-height: 1.8rem;
+}
+
+
+/* service section */
+#service-section{
+    background: #ffffff;
+    padding-top: 50px;
+}
+#service-section .container{
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+    height: 25rem;
+}
+#service-section h2{
+    text-align: center;
+    color: #545454;
+    margin-bottom: 50px;
+    font-weight: 0;
+}
+#service-section span{
+    font-weight: bold;
+}
+.service-1,.service-2,.service-3{
+    display: inline-block;
+    background-color: #F8F3F9;
+    width: 30%;
+    min-height: 100%;
+    padding: 2rem;
+    overflow: hidden;
+    box-shadow: 0 8px 6px -6px black;
+}
+.service-1 span,.service-2 span,.service-3 span{
+    color: #ED1B24;
+}
+#service-divider{
+    border-top: 3px dotted #095484;
+}
+
+/* testimonial section */
+#testimonials-section{
+    background: url("../imgs/row-section-bgpattern1.png") repeat;
+    background-position: center;
+    padding-top: 1px;
+}
+.testimonials-section-header-text{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+/*
+.testimonials-carousel{
+    width: 100%;
+}
+.testimonials-carousel img{
+    border-radius: 10px;
+}
+*/
+.carousel-item{
+    text-align: center;
+}
+iframe{
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+/* contact section */
+#contact-section{
+    background: url("../imgs/top-view-blue-monday-concept-composition-with-telephone.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1px;
+}
+.contact-container{
+    width: 100%;
+}
+.left-section{
+    display: inline-block;
+    width: 50%;
+    padding-left: 3rem;
+}
+.right-section{
+    width: 40%;
+    display: inline-block;
+    padding: 3rem 2rem ;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 0 8px 6px -6px black;
+}
+#contact-section i{
+    color: #F7022E;
+}
+
+
+/* footer */
+#footer{
+    background: url("../imgs/footer-1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+#footer .container{
+    padding-top: 2rem;
+    padding-left: 5%;
+    padding-bottom: 3rem;
+}
+#footer .first-section,#footer .second-section,#footer .third-section{
+    display: inline-block;
+    width: 30%;
+}
+#footer .second-section{
+    margin-left: 2rem;
+}
+.second-section a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 2.3rem;
+}
+.third-section a{
+    color: #ffffff;
+    transition: .5s;
+    margin-left: .8rem;
+    font-size: 1.1rem;
+}
+.third-section a:hover,.second-section a:hover{
+    color: #ED1B24;
+    transition: .5s;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* media query */
+@media(max-width: 992px){
+    .container{
+        min-width: 100%;
+    }
+    /* nav bar */
+    #menu-btn{
+        display: block;
+        line-height: 95px;
+        padding-top: .8rem;
+    }
+    nav .container{
+        width: 100%;
+        padding: 0;
+    }
+    #nav-links{
+        position: fixed;
+        background: #2c3e50;
+        width: 100vw;
+        height: 100vh;
+        top: 95px;
+        text-align: center;
+        transition: all .5s;
+        left: -200%;
+    }
+    #nav-links ul{
+        padding: 0px;
+    }
+    #nav-links ul li{
+        display: block;
+    }
+    #nav-links .dropdown button{
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        color: #ffffff;
+    }
+    .dropdown{
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    .dropdown-options{
+        overflow: auto;
+        background: #56799c;
+        width: 100%;
+        border-radius: 0px;
+        display: block;
+        transition: all .5s;
+    }
+    .dropdown-options a{
+        color: #ffffff
+    }
+    #nav-links ul li a{
+        font-size: 20px;
+        color: #ffffff;
+    }
+    #nav-links ul li a.active,#nav-links ul li a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ #nav-links{
+        left: 0px;
+        transition: all .5s;
+    }
+    /* service box section */
+    .service-box-section .card{
+        display: inline-block;
+        translate: 0px -191px;
+        margin: 0 1rem;
+        transition: .5s;
+    }
+    /* about section */
+    #about-section h2,.testimonials-section-header,#contact-section h2{
+        text-align: center;
+        color: #545454;
+        margin: 30px 0px 0px 0px;
+        font-weight: 0;
+    }
+    .about-content p{
+        line-height: 1.5rem;
+    }
+    /* service section */
+    #service-section{
+        background: #ffffff;
+        padding-top: 0px;
+    }
+    .service-1,.service-2,.service-3{
+        padding: 1rem 2rem;
+    }
+    /* testimonial section */
+    .testimonials-section-header-text{
+        text-align: center;
+        font-weight: bold;
+        margin: 2rem;
+    }
+
+}
+/* media query for tablet */
+@media(max-width: 780px){
+    nav{
+        height: 95px;
+    }
+    #logo img{
+        width: 100px;
+        height: 90px;
+    }
+    #logo,#menu-btn{
+        line-height: 65px;
+    }
+    .showcase-container{
+        height: 20rem;
+    }
+    .showcase-container h1{
+        font-size: 30px;
+        margin-top: 4.5rem;
+    }
+    .service-box-section{
+        width: 100%;
+        height: auto;
+        background: #EDF1FA;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .service-box-section .card{
+        display: block;
+        translate: 0px 0px;
+        text-align: center;
+        width: 95%;
+        margin: 1rem; 
+    }
+    .card img{
+        height: 200px;
+    }
+    .service-box-section .card:hover{
+        translate: 0px 0px;
+        transition: .5s;
+    }
+    /* service section */
+    #service-section .container{
+        width: 95%;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+    }
+    .service-1,.service-2,.service-3{
+        display: inline-block;
+        background-color: #F8F3F9;
+        width: 30%;
+        min-height: 100%;
+        padding: 2rem;
+        overflow: hidden;
+        box-shadow: 0 8px 6px -6px black;
+    }
+    
+
+}
+/* media query for mobile */
+@media(max-width: 600px){
+    .service-box-section{
+        padding: 1rem 0;
+    }
+    .service-box-section .card{
+        display: block;
+        translate: 0px 0px;
+        text-align: center;
+        width: 95%;
+        margin: 1rem; 
+    }
+    /* about section */
+    .about-section-inner-container{
+        height: auto;
+        padding: 1rem;
+    }
+    .about-section-img{
+        display: none;
+    }
+    .about-content{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0px 1.5rem;
+    }
+    .about-content p{
+        line-height: 1.5rem;
+    }
+    /* service section */
+    #service-section .container{
+        width: 95%;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+    }
+    .service-1,.service-2,.service-3{
+        display: block;
+        background-color: #F8F3F9;
+        width: 90%;
+        min-height: 100%;
+        padding: 2rem;
+        overflow: hidden;
+        margin: 1rem auto;
+        box-shadow: 0 8px 6px -6px black;
+    }
+    /* contact section */
+    .contact-container{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .left-section{
+        display: none;
+    }
+    .right-section{
+        width: 100%;
+        display: block;
+        padding: 3rem 2rem ;
+        border-radius: 5px;
+        background: #ffffff;
+        box-shadow: 0 8px 6px -6px black;
+    }
+    /* footer */
+    #footer .first-section,#footer .second-section,#footer .third-section{
+        display: inline-block;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    #footer .second-section{
+        margin-left: 0rem;
+    }
+}
